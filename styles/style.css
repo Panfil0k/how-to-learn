@@ -152,8 +152,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* Здесь было замечание ревьюера, что можно использовать grid, но мы его еще не проходили + в самом задании указано использовать флекс, у наставника этот момент уточнил, исправлять не стал */
+  column-gap: calc(100px / 3);
 }
 
 .table__cell {
@@ -223,16 +222,21 @@
   overflow: hidden;
 }
 
-.section-title_theme_dark,
-.section-subtitle_theme_dark,
 .table_theme_dark {
   color: #fff;
   z-index: 2;
+  column-gap: calc(100px / 4);
 }
 
 .table__cell_theme_dark {
-  margin-top: 80px;
   width: 200px;
+  margin-top: 80px;
+  z-index: 2;
+}
+
+.section-title_theme_dark,
+.section-subtitle_theme_dark {
+  color: #fff;
   z-index: 2;
 }
 
